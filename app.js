@@ -24,7 +24,7 @@ const connectDB = async () => {
 
 connectDB()
 
-app.use("/", async (req,res) => {
+app.get("/", async (req,res) => {
     try {
         const users = await User.find({})
         res.json(users)
